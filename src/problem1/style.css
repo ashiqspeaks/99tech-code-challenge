@@ -1,0 +1,193 @@
+.problem1-page {
+    min-height: 100vh;
+    padding: 32px;
+    color: #eaecef;
+    background: #0b0e11;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.problem1-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #2b3139;
+}
+
+.problem1-header a {
+    color: #848e9c;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.problem1-header a:hover {
+    color: #f0b90b;
+}
+
+.problem1-badge {
+    padding: 7px 10px;
+    border: 1px solid #55461a;
+    border-radius: 6px;
+    color: #f0b90b;
+    background: #211c0d;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.problem1-intro {
+    padding: 36px 0 28px;
+}
+
+.problem1-intro h1 {
+    margin: 0;
+    color: #f5f5f5;
+    font-size: clamp(25px, 3vw, 34px);
+    letter-spacing: -0.04em;
+}
+
+.problem1-intro p {
+    margin: 10px 0 0;
+    color: #848e9c;
+    font-size: 14px;
+}
+
+.problem1-code-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+.problem1-code-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #2b3139;
+    border-radius: 12px;
+    background: #181a20;
+}
+
+.problem1-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 88px;
+    padding: 18px;
+    border-bottom: 1px solid #2b3139;
+}
+
+.problem1-card-number {
+    display: grid;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1px solid #55461a;
+    border-radius: 9px;
+    color: #f0b90b;
+    background: #211c0d;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.problem1-card-header h2 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.problem1-card-header p {
+    margin: 6px 0 0;
+    color: #848e9c;
+    font-size: 11px;
+}
+
+.problem1-code-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #2b3139;
+    background: #14161b;
+    color: #848e9c;
+    font-size: 10px;
+}
+
+.problem1-code-toolbar span:first-child {
+    overflow-wrap: anywhere;
+    color: #c9d1d9;
+}
+
+.problem1-code {
+    min-height: 310px;
+    margin: 0;
+    padding: 20px 16px;
+    overflow-x: auto;
+    color: #c9d1d9;
+    background: #111318;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 12px;
+    line-height: 1.85;
+    tab-size: 2;
+    white-space: pre;
+}
+
+.problem1-results {
+    margin-top: 32px;
+}
+
+.problem1-results h2 {
+    margin: 0 0 16px;
+    font-size: 17px;
+}
+
+.problem1-results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.problem1-result-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px;
+    border: 1px solid #2b3139;
+    border-radius: 10px;
+    background: #181a20;
+}
+
+.problem1-result-card span {
+    color: #848e9c;
+    font-size: 12px;
+}
+
+.problem1-result-card strong {
+    color: #f0b90b;
+    font-size: 22px;
+}
+
+@media (max-width: 1050px) {
+    .problem1-code-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .problem1-code {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .problem1-page {
+        padding: 20px 14px;
+    }
+
+    .problem1-intro {
+        padding-top: 28px;
+    }
+
+    .problem1-results-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,133 @@
+.comparison-page {
+    min-height: 100vh;
+    padding: 24px;
+    color: #eaecef;
+    background: #0b0e11;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.comparison-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.comparison-header a {
+    color: #f0b90b;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.comparison-header h1 {
+    margin: 0;
+    font-size: 22px;
+}
+
+
+.comparison-panels {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.code-panel {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #d9dee7;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.code-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.code-panel-header h2 {
+    margin: 0;
+    font-size: 17px;
+    color: #0b0e11;
+}
+
+.code-panel-header p {
+    margin: 5px 0 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.original-panel {
+    border-top: 4px solid #dc6262;
+}
+
+.original-panel .code-panel-header {
+    background: #fff5f5;
+}
+
+.refactored-panel {
+    border-top: 4px solid #26976a;
+}
+
+.refactored-panel .code-panel-header {
+    background: #effaf4;
+}
+
+.code-badge {
+    flex-shrink: 0;
+    padding: 5px 9px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.original-badge {
+    color: #a62d2d;
+    background: #ffe1e1;
+}
+
+.refactored-badge {
+    color: #176b49;
+    background: #d5f5e3;
+}
+
+.code-panel pre {
+    margin: 0;
+    padding: 20px;
+    max-height: 72vh;
+    overflow: auto;
+    background: #fafbfc;
+    color: #263244;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 13px;
+    line-height: 1.65;
+    tab-size: 2;
+    white-space: pre;
+}
+
+.original-panel pre {
+    background: #fffafa;
+}
+
+.refactored-panel pre {
+    background: #f7fcf8;
+}
+
+.code-panel code {
+    font: inherit;
+}
+
+@media (max-width: 900px) {
+    .comparison-panels {
+        grid-template-columns: 1fr;
+    }
+
+    .code-panel pre {
+        max-height: 60vh;
+    }
+}
+

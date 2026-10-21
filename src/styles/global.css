@@ -1,0 +1,198 @@
+
+:root {
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+    color: #eaecef;
+    background: #0b0e11;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Binance-inspired theme */
+    --color-bg: #0b0e11;
+    --color-surface: #181a20;
+    --color-panel: #202127;
+    --color-border: #2b3139;
+    --color-text: #eaecef;
+    --color-muted: #848e9c;
+    --color-accent: #f0b90b;
+    --color-accent-hover: #f8d33a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 320px;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Dashboard */
+.dashboard {
+    width: min(100% - 40px, 1040px);
+    margin: 0 auto;
+    padding: 80px 0;
+}
+
+.dashboard-header {
+    margin-bottom: 36px;
+}
+
+.eyebrow {
+    color: var(--color-accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.dashboard-header h1 {
+    margin: 16px 0 10px;
+    color: var(--color-text);
+    font-size: clamp(28px, 6vw, 32px);
+}
+
+.subtitle {
+    color: var(--color-muted);
+    line-height: 1.6;
+}
+
+/* Problem cards */
+.problem-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.problem-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 205px;
+    padding: 24px;
+    border: 1px solid var(--color-border);
+    border-radius: 16px;
+    background: var(--color-surface);
+    transition:
+            border-color 160ms ease,
+            transform 160ms ease,
+            background-color 160ms ease;
+}
+
+.problem-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-accent);
+    background: #1e2026;
+}
+
+.card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.problem-number {
+    color: var(--color-accent);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.status {
+    color: var(--color-accent);
+    font-size: 11px;
+}
+
+.problem-card h2 {
+    margin: 24px 0 8px;
+    color: var(--color-text);
+    font-size: 20px;
+}
+
+.problem-card p {
+    margin: 0 0 22px;
+    color: var(--color-muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.card-link {
+    margin-top: auto;
+    color: var(--color-accent);
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 160ms ease;
+}
+
+.card-link:hover {
+    color: var(--color-accent-hover);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .dashboard {
+        padding: 48px 0;
+    }
+
+    .problem-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
